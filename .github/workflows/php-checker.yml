@@ -35,5 +35,6 @@ jobs:
         lock: ./composer.lock
         # Whether to fail when issues are detected (false by default)
         disable-exit-code: 1
+        id: security-check
     - name: Display the vulnerabilities as JSON
       run: echo ${{ steps.security-check.outputs.vulns }}
